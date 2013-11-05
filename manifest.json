@@ -1,0 +1,30 @@
+{
+    "name": "Website Monitor",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "You should add your monitor script, and list it on manifest.json",
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": [
+            //libs
+            "jquery.min.js",
+            "jquery.mongohq.js",
+            "dropbox.min.js",
+            "md5.js",
+            //core
+            "core.js",
+            //user script
+            "mpf.js",
+            "test.js"
+        ]}
+    ],
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "background",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
